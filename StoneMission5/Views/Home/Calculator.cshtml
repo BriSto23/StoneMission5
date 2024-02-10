@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Cost of Service Calculator";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Services Calculator</title>
+    <link href="~/css/site.css" rel="stylesheet" />
+</head>
+<body>
+    <h1>Use this page to calculate how much it would cost for me to teach you Minecraft Survival Games</h1>
+
+    <label for="hours">Number of Hours:</label>
+    <input type="number" id="hours" min="0" step="1" required />
+
+    <label for="hourlyRate">Hourly Rate:</label>
+    <input type="text" id="hourlyRate" value="$500 per hour :)" readonly />
+
+    <button id="calculateBtn">Calculate Total</button>
+
+    <label for="total">Total:</label>
+    <input type="text" id="total" readonly />
+
+    <a href="@Url.Action("Index", "Home")">Back to Home</a>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/calculator.js"></script>
+</body>
+</html>
+
